@@ -34,7 +34,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Ejecutar pruebas Cucumber
-        run: npm run test:formulario
+        run: npm run test:elephant
         env:
           CI: true
 
