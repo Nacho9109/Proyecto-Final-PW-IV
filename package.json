@@ -1,0 +1,40 @@
+{
+ "name": "proyectofinal",
+ "version": "1.0.0",
+ "main": "index.js",
+ "scripts": {
+  "clean:reports": "rimraf reports && mkdir -p reports/json reports/html-report reports/screenshots reports/videos",
+  "test": "npm run clean:reports && cucumber-js --format progress --format json:reports/json/cucumber-report.json && npm run report",
+  "test:dev": "npm run clean:reports && cross-env ENV=dev cucumber-js --format progress --format json:reports/json/dev-report.json && npm run report",
+  "test:smoke": "npm run clean:reports && cucumber-js --tags @smoke --format progress --format json:reports/json/smoke-report.json && npm run report",
+  "test:formulario": "npm run clean:reports && cucumber-js --tags @formulario --format progress --format json:reports/json/formulario-report.json && npm run report",
+  "test:elephant": "npm run clean:reports && cucumber-js --tags @elephant --format progress --format json:reports/json/elephant-report.json && npm run report",
+  "test:chromium": "npm run clean:reports && cross-env BROWSER=chromium cucumber-js --format progress --format json:reports/json/chromium-report.json && npm run report",
+  "test:firefox": "npm run clean:reports && cross-env BROWSER=firefox cucumber-js --format progress --format json:reports/json/firefox-report.json && npm run report",
+  "test:webkit": "npm run clean:reports && cross-env BROWSER=webkit cucumber-js --format progress --format json:reports/json/webkit-report.json && npm run report",
+  "test:chromium:run": "cross-env BROWSER=chromium cucumber-js --format progress --format json:reports/json/chromium-report.json",
+  "test:firefox:run": "cross-env BROWSER=firefox cucumber-js --format progress --format json:reports/json/firefox-report.json",
+  "test:webkit:run": "cross-env BROWSER=webkit cucumber-js --format progress --format json:reports/json/webkit-report.json",
+  "test:declarativo": "npm run clean:reports && cucumber-js --tags @declarativo --format progress --format json:reports/json/elephant-report.json && npm run report",
+  "test:browsers": "npm run clean:reports && npm-run-all --continue-on-error --parallel test:chromium:run test:firefox:run test:webkit:run && npm run report",
+  "report": "node generate-report.js"
+ },
+ "keywords": [],
+ "author": "",
+ "license": "ISC",
+ "description": "",
+ "devDependencies": {
+  "@cucumber/cucumber": "^12.9.0",
+  "@playwright/test": "^1.60.0",
+  "@types/node": "^25.9.1",
+  "cross-env": "^10.1.0",
+  "dotenv": "^17.4.2",
+  "multiple-cucumber-html-reporter": "^3.10.0",
+  "npm-run-all": "^4.1.5",
+  "open": "^11.0.0",
+  "playwright": "^1.60.0",
+  "rimraf": "^6.1.3",
+  "ts-node": "^10.9.2",
+  "typescript": "^6.0.3"
+ }
+}

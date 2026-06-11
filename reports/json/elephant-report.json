@@ -1,0 +1,123 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "payment-gateway;compra-juguete-de-elefante---declarativo",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "Compra juguete de Elefante - Declarativo",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 119072291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 35,
+            "name": "ingreso a la web de DemoGuru",
+            "match": {
+              "location": "tests/steps/elephant.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2810655834
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "que existe una tarjeta de crédito válida para realizar compras",
+            "match": {
+              "location": "tests/steps/elephant.steps.ts:109"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 783417625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "el usuario compra un juguete de Elefante",
+            "match": {
+              "location": "tests/steps/elephant.steps.ts:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 880714374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 40,
+            "name": "la compra es realizada con exito",
+            "match": {
+              "location": "tests/steps/elephant.steps.ts:129"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32914917
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "se genera una orden de compra",
+            "match": {
+              "location": "tests/steps/elephant.steps.ts:133"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 295687124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "el detalle de la transacción queda registrado correctamente",
+            "match": {
+              "location": "tests/steps/elephant.steps.ts:138"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 997373458
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 53340375
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@declarativo",
+            "line": 33
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "payment-gateway",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Payment Gateway",
+    "tags": [],
+    "uri": "tests/features/elephant.feature"
+  }
+]
