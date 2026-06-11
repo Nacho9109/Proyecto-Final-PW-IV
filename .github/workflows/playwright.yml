@@ -49,5 +49,6 @@ jobs:
           path: reports/html-report
 
       - name: Publicar GitHub Pages
+        id: deployment
         if: always()
         uses: actions/deploy-pages@v4
